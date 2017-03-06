@@ -9,5 +9,6 @@ Version | Changelog |
 
 
 ____
-
 ####Installing WSK
+This progressive web application is built ontop of the Web Start Kit standard, therefore requires node and gulp to run testing and serve content, to install run:
+''''npm install --global gulp && npm install
