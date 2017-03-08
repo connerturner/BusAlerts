@@ -1,14 +1,16 @@
 {
   "version": "1.0.0",
-  "name": "Web Starter Kit",
+  "name": "Bus Alerts",
   "launch_path": "/index.html",
-  "description": "A front-end template that helps you build fast, modern mobile web apps.",
+  "description": "A web app for bus notifications",
   "icons": {
-    "128": "/images/touch/icon-128x128.png"
+    "128": "/images/touch/ba.png",
+    "160": "/images/touch/ba@1_25x.png",
+    "192": "/images/touch/ba@1_5x.png",
   },
   "developer": {
-    "name": "",
-    "url": ""
+    "name": "Zyme Ltd",
+    "url": "https://zyme.xyz"
   },
   "installs_allowed_from": [
     "*"
@@ -18,8 +20,8 @@
   },
   "locales": {
     "en": {
-      "name": "Web Starter Kit",
-      "description": "A front-end template that helps you build fast, modern mobile web apps."
+      "name": "Bus Alerts",
+      "description": "A web app for bus notifications"
     }
   }
 }
