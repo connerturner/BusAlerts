@@ -13,7 +13,7 @@
     );
 
   if ('serviceWorker' in navigator &&
-      (window.location.protocol === 'https:' || isLocalhost)) {
+      (window.location.protocol === 'https:' || isLocalhost) && 'PushManager' in window) {
     navigator.serviceWorker.register('service-worker.js')
     .then(function(registration) {
       registration.onupdatefound = function() {
