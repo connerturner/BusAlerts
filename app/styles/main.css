@@ -233,8 +233,8 @@ html, body {
   }
   .demo-card-wide > .mdl-card__title {
     color: #fff;
-    height: 176px;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/welcome_card_tuts.png') center / cover;
+    height: 100px;
+    background-color: #2196F3
   }
   .demo-card-wide > .mdl-card__menu {
     color: #fff;
