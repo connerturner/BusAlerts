@@ -215,3 +215,32 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+  .demo-card-wide.mdl-card {
+    margin: 0 auto;
+
+  }
+  @media (min-width:512px){
+    .demo-card-wide.mdl-card {
+      margin-top: 20px;
+      width: 512px;
+    }
+  }
+    @media (max-width:512px){
+    .demo-card-wide.mdl-card {
+      margin-top: 20px;
+      width: 370px;
+    }
+  }
+  .demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/welcome_card_tuts.png') center / cover;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+
+  body {
+    background: #fafafa;
+    position: relative;
+  }
