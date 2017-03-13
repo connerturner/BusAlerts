@@ -4,8 +4,6 @@
   "launch_path": "/index.html",
   "description": "A web app for bus notifications",
   "icons": {
-    "128": "/images/touch/ba.png",
-    "160": "/images/touch/ba@1_25x.png",
     "192": "/images/touch/ba@1_5x.png",
   },
   "developer": {
