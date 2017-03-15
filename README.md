@@ -10,5 +10,5 @@ Version | Changelog |
 :---:|:---:|
 
 #### Contributing
-Fok this repo, its a progressive web application built ontop of the Web Start Kit standard, therefore requires node and gulp to run testing and serve content, to install run:
+Fork this repo, its a progressive web application built ontop of the Web Start Kit standard, therefore requires node and gulp to run testing and serve content, to install run:
 `npm install --global gulp && npm install`
