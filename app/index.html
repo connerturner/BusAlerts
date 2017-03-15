@@ -51,6 +51,19 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
+    <script>
+      //update selection options
+      $.getJSON("http://zyme.xyz/ide/workspace/busalerts/webServices.php", function(data){
+        var select = document.getElementById("busSelection");
+        for(var k in data){
+          var option = document.createElement("option");
+          option.innerHTML = data[k].number;
+          option.value = data[k].number
+
+          select.appendChild(option);
+        }
+      })
+    </script>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
