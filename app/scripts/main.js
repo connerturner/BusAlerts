@@ -1,4 +1,5 @@
 /* eslint-env browser */
+/*eslint linebreak-style: ["error", "windows"]*/
 (function() {
   'use strict';
 
