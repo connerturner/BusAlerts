@@ -36,7 +36,7 @@
       
       <select id="busSelection">
       </select>
-      
+      <p></p>
       <p>
         <button  id="btnSubscribe" class="js-subscribe mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--blue mdl-color-text--white">
           Send me notifications
@@ -52,8 +52,8 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
     <script>
-      //update selection options
-      $.getJSON("http://zyme.xyz/ide/workspace/busalerts/webServices.php", function(data){
+      //update selection option
+            $.getJSON("http://zyme.xyz/ide/workspace/busalerts/serveTmpJson.php", function(data){
         var select = document.getElementById("busSelection");
         for(var k in data){
           var option = document.createElement("option");
