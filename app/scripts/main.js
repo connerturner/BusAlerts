@@ -1,5 +1,5 @@
 /* eslint-env browser */
-/* eslint linebreak-style: [2, "windows"]*/
+/* eslint linebreak-style: 0*/
 /* eslint no-unused-vars: 0*/
 /* eslint max-len: 0*/
 /* eslint require-jsdoc: 0*/
