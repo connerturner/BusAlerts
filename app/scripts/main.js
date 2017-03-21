@@ -61,13 +61,13 @@
       pushButton.textContent = 'Push Messaging Blocked.';
       pushButton.disabled = true;
       updateSubscriptionOnServer(null);
-    return;
+      return;
     }
     if (isSubscribed) {
       pushButton.textContent = 'Disable Notifications';
       pushButton.classList.remove('mdl-color--blue');
       pushButton.classList.add('mdl-color--red-700');
-      document.querySelector('#busSelection').setAttribute('disabled','true')
+      document.querySelector('#busSelection').setAttribute('disabled', 'true');
     } else {
       pushButton.textContent = 'Enable Notifications';
     }
@@ -113,15 +113,15 @@
   function updateSubscriptionOnServer(subscription) {
   // Send subscription to application server
 
-  const subscriptionJson = document.querySelector('.js-subscription-json');
-  const subscriptionDetails =
+    const subscriptionJson = document.querySelector('.js-subscription-json');
+    const subscriptionDetails =
     document.querySelector('.js-subscription-details');
 
-  if (subscription) {
-    subscriptionJson.textContent = JSON.stringify(subscription);
-    subscriptionDetails.classList.remove('is-invisible');
-  } else {
-    subscriptionDetails.classList.add('is-invisible');
+    if (subscription) {
+      subscriptionJson.textContent = JSON.stringify(subscription);
+      subscriptionDetails.classList.remove('is-invisible');
+    } else {
+      subscriptionDetails.classList.add('is-invisible');
+    }
   }
-}
 })();
