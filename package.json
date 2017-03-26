@@ -33,7 +33,7 @@
   },
   "private": true,
   "scripts": {
-    "test": "gulp && git status | grep 'working directory clean' >/dev/null"
+    "test": "gulp"
   },
   "eslintConfig": {
     "extends": "google"
