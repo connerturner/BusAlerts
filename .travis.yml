@@ -7,7 +7,7 @@ node_js:
 - '0.12'
 deploy:
   provider: gae
-  keyfile: client.json.enc
+  keyfile: client-secret.json.enc
   project: runshawbusalerts
   skip_cleanup: true
 before_install:
