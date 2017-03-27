@@ -33,7 +33,8 @@
   },
   "private": true,
   "scripts": {
-    "test": "gulp"
+    "test": "gulp",
+      "posttest": "cd . && cp app.yaml dist && cd dist && appcfg.py update . # \"rm ~/.appcfg_oauth2_tokens\" if error"
   },
   "eslintConfig": {
     "extends": "google"
