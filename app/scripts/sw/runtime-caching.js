@@ -1,3 +1,4 @@
+/* eslint linebreak-style: 0*/
 /*!
  *
  *  Web Starter Kit

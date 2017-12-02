@@ -25,13 +25,15 @@
 
     <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body class="mdl-color--grey-00 mdl-color-text--black mdl-base">
+  <body class="mdl-color--grey-00 mdl-color-text--black">
   <header class="mdl-color--blue mdl-shadow--2dp">
     <h1>Bus Alerts</h1>
   </header>
 
   <main>
-    <section>
+    <div class="alerts">
+    </div>
+    <section id="notificationManager">
       <h3>Manage your notifications</h3>
       <p>Choose your bus number below and a notification will be sent to your device when it arrives at Runshaw</p>
       
@@ -43,9 +45,6 @@
         </button>
       </p>
     </section>
-        <section class="subscription-details js-subscription-details is-invisible">
-      <pre><code class="js-subscription-json"></code></pre>
-    </section>
 
   </main>
     
@@ -54,7 +53,7 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-    <script>
+    <!--<script>
       //update selection option
       $.getJSON("https://zyme.xyz/ide/workspace/busalerts/serveTmpJson.php", function(data){
         var select = document.getElementById("busSelection");
@@ -65,8 +64,10 @@
 
           select.appendChild(option);
         }
-      })
-    </script>
+      }).then(
+        
+      )
+    </script>-->
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

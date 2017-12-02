@@ -8,6 +8,7 @@
 
   var isSubscribed = false;
   var swRegistration;
+  var alert = document.querySelector('#alerts');
   var pushButton = document.querySelector('#btnSubscribe');
   var applicationRootPubKey = 'BMjnmT3wvHrM7jg1IOUTy-F3ee_Kld_HgsBrJJMeyQlbH-mEastxn6IuA-SOn4jvrG7oX6oUfnsM1JSXGWWduBg';
 
@@ -33,7 +34,7 @@
     pushButton.addEventListener('click', function() {
       pushButton.disabled = true;
       if (isSubscribed) {
-      // Unsubscribe user
+        unsubscribeUser();
       } else {
         subscribeUser();
       }
@@ -59,7 +60,7 @@
   function updateBtn() {
     if (Notification.permission === 'denied') {
       pushButton.textContent = 'Push Messaging Blocked.';
-      pushButton.disabled = true;
+      pushButton.setAttribute('disabled', 'true');
       updateSubscriptionOnServer(null);
       return;
     }
@@ -70,6 +71,9 @@
       document.querySelector('#busSelection').setAttribute('disabled', 'true');
     } else {
       pushButton.textContent = 'Enable Notifications';
+      pushButton.classList.remove('mdl-color--red-700');
+      pushButton.classList.add('mdl-color--blue');
+      document.querySelector('#busSelection').removeAttribute('disabled');
     }
 
     pushButton.disabled = false;
@@ -97,11 +101,8 @@
     })
   .then(function(subscription) {
     console.log('User is subscribed.');
-
     updateSubscriptionOnServer(subscription);
-
     isSubscribed = true;
-
     updateBtn();
   })
   .catch(function(err) {
@@ -109,18 +110,31 @@
     updateBtn();
   });
   }
+
+  function unsubscribeUser() {
+    swRegistration.pushManager.getSubscription()
+    .then(function(subscription) {
+      if (subscription) {
+        return subscription.unsubscribe();
+      }
+    })
+    .catch(function(error) {
+      console.log('Error unsubscribing', error);
+    })
+    .then(function() {
+      updateSubscriptionOnServer(null);
+      console.log('User is unsubscribed.');
+      isSubscribed = false;
+      updateBtn();
+    });
+  }
+
   function updateSubscriptionOnServer(subscription) {
-  // Send subscription to application server
-
-    const subscriptionJson = document.querySelector('.js-subscription-json');
-    const subscriptionDetails =
-    document.querySelector('.js-subscription-details');
-
+    // Send subscription to application server
     if (subscription) {
-      subscriptionJson.textContent = JSON.stringify(subscription);
-      subscriptionDetails.classList.remove('is-invisible');
+      console.log(JSON.stringify(subscription));
     } else {
-      subscriptionDetails.classList.add('is-invisible');
+      console.log(JSON.stringify('{noSubscription}'));
     }
   }
 })();
