@@ -1,21 +1,16 @@
 {
-  "name": "alerts",
-  "short_name": "alerts",
+  "name": "Bus Alerts",
+  "short_name": "Bus Alerts",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#fff",
-  "theme_color": "#673ab8",
+  "background_color": "#2196F3",
+  "theme_color": "#2196F3",
   "icons": [
     {
-      "src": "/assets/icons/android-chrome-192x192.png",
+      "src": "/assets/icons/ba@1.25x.png",
       "type": "image/png",
       "sizes": "192x192"
-    },
-    {
-      "src": "/assets/icons/android-chrome-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ]
 }
