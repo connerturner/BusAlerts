@@ -13,7 +13,7 @@ before_script:
   - npm install
 
 script:
-  - npm run build --report
+  - npm run build
 
 notifications:
   email:
