@@ -9,11 +9,11 @@ branches:
 
 before_script:
   - cd alerts
-  - npm install -g preact-cli
+  - npm install -g vue-cli
   - npm install
 
 script:
-  - preact build
+  - npm run build
 
 notifications:
   email:

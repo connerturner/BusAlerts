@@ -1,8 +1,8 @@
-# preact material app
+# alerts
 
-Super performant `Material` app for preact world using [preact-material-components](https://github.com/prateekbh/preact-material-components)
+> Bus Alerts
 
-## CLI Commands
+## Build Setup
 
 ``` bash
 # install dependencies
@@ -14,8 +14,8 @@ npm run dev
 # build for production with minification
 npm run build
 
-# test the production build locally
-npm run serve
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

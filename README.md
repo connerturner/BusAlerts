@@ -10,7 +10,3 @@ Go to [bus.connerturner.net](http://bus.connerturner.net) and subscribe to notif
 #### Releases:
 Version | Changelog |
 :---:|:---:|
-
-#### Contributing
-Fork this repo, its a progressive web application built ontop of the Web Start Kit standard, therefore requires node and gulp to run testing and serve content, to install run:
-`npm install --global gulp && npm install`
