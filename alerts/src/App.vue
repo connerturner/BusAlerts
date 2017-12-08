@@ -1,22 +1,23 @@
 <template>
   <div id="app">
     <header>
-      <span>Vue.js PWA</span>
+      <span>Runshaw Bus Alerts</span>
     </header>
     <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <hello></hello>
+      <BusSelect></BusSelect>
     </main>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import BusSelect from './components/BusSelect'
+import Subscription from './components/SubscriptionHandler'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    BusSelect,
+    Subscription
   }
 }
 </script>
