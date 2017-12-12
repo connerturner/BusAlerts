@@ -1,8 +1,8 @@
 <template>
   <div class="busselection">
     <h3>{{sectionTitle}}</h3>
-    <div class="selection">
-      <select class="select">
+    <div class="form-group selection">
+      <select class="form-select select">
         <option v-for="bus in busList">{{bus.number}}</option>
       </select>
     </div>
@@ -26,12 +26,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.selection {
-  width: 100%;
-}
-.select {
-  width: 20%;
-}
-</style>
