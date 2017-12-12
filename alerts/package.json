@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "spectre.css": "^0.5.0",
     "vue": "^2.5.2"
   },
   "devDependencies": {
