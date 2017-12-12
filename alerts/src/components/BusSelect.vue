@@ -2,10 +2,11 @@
   <div class="busselection">
     <h3>{{sectionTitle}}</h3>
     <div class="form-group selection">
-      <select class="form-select select">
-        <option v-for="bus in busList">{{bus.number}}</option>
+      <select class="form-select select" v-model="selected">
+        <option v-for="bus in busList" v-bind:value="bus.number">{{bus.number}}</option>
       </select>
     </div>
+    <button>Subscribe to {{ selected }} notifcations</button>
   </div>
 </template>
 
@@ -21,6 +22,7 @@ export default {
         {number: '765'},
         {number: '766'}
       ],
+      selected: 762,
       sectionTitle: 'Select your bus number:'
     }
   }
